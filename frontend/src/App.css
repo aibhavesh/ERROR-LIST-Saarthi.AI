@@ -1,0 +1,408 @@
+.nav-link {
+    color: #004d1a;
+    font-weight: 600;
+}
+
+.hero-text span {
+    color: #004d1a;
+}
+
+.highlight {
+    background-color: #d1f7d1;
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+.feature-box {
+    border: 2px solid #004d1a;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+    background-color: #f8fdf8;
+}
+
+.feature-box img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.co-image {
+    width: 90px;
+    height: 90px;
+}
+
+.btn-eco {
+    background-color: #004d1a;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 25px;
+}
+
+.btn-eco:hover {
+    background-color: #006622;
+}
+
+.navbar-brand img {
+    width: 45px;
+    height: 45px;
+}
+
+@media (max-width: 768px) {
+    .feature-box img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .co-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .navbar-brand span {
+        font-size: 18px;
+    }
+}
+
+.profile-icon {
+    width: 35px;
+    height: 35px;
+    background-color: #111;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.custom-dropdown {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 280px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 999;
+}
+
+.custom-dropdown.active {
+    display: block;
+}
+
+.dropdown-header {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-header img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.dropdown-header .info small {
+    color: gray;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-item i {
+    margin-right: 10px;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+.switch-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+
+/* AboutUs.css */
+.about-page {
+    background-color: #f6fff6;
+  }
+  
+  .highlight-box {
+    background-color: #e0ffe0;
+    padding: 20px;
+    border-radius: 12px;
+  }
+  
+  .text-green {
+    color: #006400;
+  }
+  
+  .text-purple {
+    color: #3e206d;
+  }
+  
+  .section-icon {
+    font-size: 1.5rem;
+  }
+  
+  .icon-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* PlanEcoTrip.css */
+body {
+    background-color: #ffffff;
+  }
+  
+  .eco-trip-container {
+    background-color: #d1f7d1;
+    border-radius: 10px;
+    padding: 30px;
+  }
+  
+  .eco-form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .btn-eco {
+    background-color: #006622;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .btn-eco:hover {
+    background-color: #004d1a;
+  }
+  
+  .ai-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .eco-heading {
+    font-weight: 700;
+    color: #006622;
+  }
+  
+  .eco-subheading {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  @media (max-width: 768px) {
+    .form-col {
+      margin-bottom: 30px;
+    }
+  }
+  
+
+  body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-container {
+    max-width: 500px;
+    background-color: #d1f7d1;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #004d1a;
+    margin: 60px auto;
+  }
+  
+  .btn-green {
+    background-color: #004d1a;
+    color: white;
+  }
+  
+  .btn-green:hover {
+    background-color: #006622;
+  }
+  
+  .form-check-label {
+    font-size: 0.9rem;
+  }
+  
+  .social-icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: white;
+    border: none;
+    margin: 0 10px;
+  }
+  
+  .google-btn {
+    background-color: #db4437;
+  }
+  
+  .facebook-btn {
+    background-color: #3b5998;
+  }
+  
+  .apple-btn {
+    background-color: #000000;
+  }
+  
+  .navbar-brand img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .nav-link {
+    font-weight: 600;
+    color: #004d1a;
+  }
+  
+
+  body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .form-container {
+    max-width: 500px;
+    background-color: #d1f7d1;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid #004d1a;
+    margin: 60px auto;
+  }
+  
+  .btn-green {
+    background-color: #004d1a;
+    color: white;
+  }
+  
+  .btn-green:hover {
+    background-color: #006622;
+  }
+  
+  .form-control::placeholder {
+    font-size: 0.9rem;
+  }
+  
+  .form-check-label {
+    font-size: 0.8rem;
+  }
+  
+  .social-btn {
+    text-align: left;
+    padding-left: 15px;
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #004d1a;
+  }
+  
+  .divider:not(:empty)::before {
+    margin-right: .75em;
+  }
+  
+  .divider:not(:empty)::after {
+    margin-left: .75em;
+  }
+  
+  .nav-link {
+    font-weight: 600;
+    color: #004d1a;
+  }
+  
+  .navbar-brand img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .fitted-logo {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .custom-dropdown .dropdown-item {
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .custom-dropdown .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .helpus-page {
+    background-color: #f6fff6;
+  }
+  
+  .help-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .help-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .helpus-page h1,
+  .helpus-page h3,
+  .helpus-page h4,
+  .helpus-page h5 {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  .dark-mode .feature-box {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+  }
+  
+  .dark-mode .text-muted {
+    color: #ccc !important;
+  }
+  
+  .dark-mode .btn-eco {
+    background-color: #28a745;
+    color: white;
+  }

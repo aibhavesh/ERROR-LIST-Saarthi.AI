@@ -1,0 +1,51 @@
+.logo-icon {
+    font-size: 1.5rem;
+    color: green;
+  }
+  
+  .profile-circle {
+    width: 35px;
+    height: 35px;
+    background-color: #111;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-weight: bold;
+  }
+  
+  .highlight-agent {
+    background-color: #dcefed;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    color: #065f46;
+  }
+  
+  .green-text {
+    color: #0a4f2d;
+  }
+  
+  .dot {
+    color: brown;
+    font-weight: bold;
+  }
+  
+  .btn-dark-green {
+    background-color: #0a4f2d;
+    color: white;
+    border: none;
+  }
+  
+  .btn-dark-green:hover {
+    background-color: #064e3b;
+  }
+  
+  .hero-img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+  
+  .feature-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 128, 0, 0.1);
+    transition: 0.2s ease-in-out;
+  }

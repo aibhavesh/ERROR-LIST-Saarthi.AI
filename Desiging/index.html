@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saarthi.AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .nav-link {
+            color: #004d1a;
+            font-weight: 600;
+        }
+
+        .hero-text span {
+            color: #004d1a;
+        }
+
+        .highlight {
+            background-color: #d1f7d1;
+            padding: 0 4px;
+            border-radius: 4px;
+        }
+
+        .feature-box {
+            border: 2px solid #004d1a;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            height: 100%;
+            background-color: #f8fdf8;
+        }
+
+        .feature-box img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .co-image {
+            width: 90px;
+            height: 90px;
+        }
+
+        .btn-eco {
+            background-color: #004d1a;
+            color: white;
+            border-radius: 25px;
+            padding: 10px 25px;
+        }
+
+        .btn-eco:hover {
+            background-color: #006622;
+        }
+
+        .navbar-brand img {
+            width: 45px;
+            height: 45px;
+        }
+
+        @media (max-width: 768px) {
+            .feature-box img {
+                height: 50px;
+                width: 50px;
+            }
+
+            .co-image {
+                width: 70px;
+                height: 70px;
+            }
+
+            .navbar-brand span {
+                font-size: 18px;
+            }
+        }
+
+        .profile-icon {
+            width: 35px;
+            height: 35px;
+            background-color: #111;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .custom-dropdown {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            width: 280px;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: none;
+            z-index: 999;
+        }
+
+        .custom-dropdown.active {
+            display: block;
+        }
+
+        .dropdown-header {
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-header img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .dropdown-header .info small {
+            color: gray;
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .dropdown-item i {
+            margin-right: 10px;
+        }
+
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+        }
+
+        .switch-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-3 position-relative">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand d-flex align-items-center text-success fw-bold" href="#">
+                <img src="Selection (2).png" class="me-2" alt="Logo">
+                <span>Saarthi.AI</span>
+            </a>
+            <div class="d-flex align-items-center">
+                <a class="nav-link me-3" href="#">About</a>
+                <a class="nav-link me-3" href="#">Help</a>
+                <a class="nav-link me-3 fw-bold" href="#">Login</a>
+                <button class="btn btn-outline-success me-2">Sign Up</button>
+                <div class="profile-icon" id="profileBtn">A</div>
+            </div>
+
+            <!-- Profile Dropdown -->
+            <div class="custom-dropdown" id="dropdownMenu">
+                <div class="dropdown-header">
+                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User">
+                    <div class="info">
+                        <strong>User name</strong><br>
+                        <small>example@gmail.com</small>
+                    </div>
+                </div>
+                <a href="#" class="dropdown-item"><i class="bi bi-person-circle"></i> Edit profile</a>
+                <a href="#" class="dropdown-item"><i class="bi bi-gear"></i> Preferences</a>
+                <div class="switch-container">
+                    <span><i class="bi bi-moon"></i> Night mode</span>
+                    <div class="form-check form-switch m-0">
+                        <input class="form-check-input" type="checkbox" id="nightSwitch">
+                    </div>
+                </div>
+                <a href="#" class="dropdown-item"><i class="bi bi-clock-history"></i> History</a>
+                <a href="#" class="dropdown-item"><i class="bi bi-award"></i> Badges earned</a>
+                <a href="#" class="dropdown-item"><i class="bi bi-leaf"></i> Sustainability Score</a>
+                <hr class="m-0">
+                <a href="#" class="dropdown-item text-danger"><i class="bi bi-box-arrow-right"></i> Sign out</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h2 class="fw-bold hero-text">Intelligent AI <span class="highlight">Agents</span> Designed To</h2>
+                <h2 class="fw-bold hero-text">Transform your <span class="text-success">JOURNEY</span><span class="text-danger">.</span></h2>
+                <button class="btn btn-eco mt-4">Plan My ECOTrip</button>
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-box">
+                            <img src="WhatsApp Image 2025-04-18 at 22.36.11_9bbbbf5c.jpg" alt="Public Transport" class="img-fluid">
+                            <h6 class="fw-bold mt-2">Public Transport</h6>
+                            <p class="text-muted">Know all local options in one click.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-box">
+                            <img src="WhatsApp Image 2025-04-18 at 22.36.35_e83babe7.jpg" alt="CO Comparison" class="co-image">
+                            <h6 class="fw-bold mt-2">CO Comparison</h6>
+                            <p class="text-muted">Get real-time emissions estimate.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-box">
+                            <img src="WhatsApp Image 2025-04-18 at 22.37.10_19fa8e23.jpg" alt="Cost Saver" class="img-fluid">
+                            <h6 class="fw-bold mt-2">Cost Saver</h6>
+                            <p class="text-muted">Save money by choosing smarter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center mt-4 mt-md-0">
+                <img src="WhatsApp Image 2025-04-18 at 22.34.44_1fca03f5.jpg" class="img-fluid" alt="AI Image">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const profileBtn = document.getElementById("profileBtn");
+        const dropdown = document.getElementById("dropdownMenu");
+
+        profileBtn.addEventListener("click", () => {
+            dropdown.classList.toggle("active");
+        });
+
+        document.addEventListener("click", function (e) {
+            if (!profileBtn.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saarthi.AI - Signup</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-container {
+      max-width: 500px;
+      background-color: #d1f7d1;
+      padding: 30px;
+      border-radius: 10px;
+      border: 2px solid #004d1a;
+      margin: 60px auto;
+    }
+
+    .btn-green {
+      background-color: #004d1a;
+      color: white;
+    }
+
+    .btn-green:hover {
+      background-color: #006622;
+    }
+
+    .form-control::placeholder {
+      font-size: 0.9rem;
+    }
+
+    .form-check-label {
+      font-size: 0.8rem;
+    }
+
+    .social-btn {
+      text-align: left;
+      padding-left: 15px;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: '';
+      flex: 1;
+      border-bottom: 1px solid #004d1a;
+    }
+
+    .divider:not(:empty)::before {
+      margin-right: .75em;
+    }
+
+    .divider:not(:empty)::after {
+      margin-left: .75em;
+    }
+
+    .nav-link {
+      font-weight: 600;
+      color: #004d1a;
+    }
+
+    .navbar-brand img {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom py-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center text-success fw-bold" href="#">
+        <img src="Selection (2).png" class="me-2" alt="Logo">
+        <span>Saarthi.AI</span>
+      </a>
+      <div class="ms-auto d-flex align-items-center">
+        <a class="nav-link me-3" href="#">About</a>
+        <a class="nav-link me-3" href="#">Help</a>
+        <a class="nav-link me-3" href="#">How it works?</a>
+        <div class="rounded-circle border border-success d-flex justify-content-center align-items-center"
+          style="width: 35px; height: 35px;">
+          <span class="text-success fw-bold">A</span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Signup Form -->
+  <div class="form-container shadow">
+    <h4 class="mb-4 fw-bold">Sign up</h4>
+
+    <!-- Social Buttons -->
+    <div class="d-grid gap-2 mb-3">
+      <button class="btn btn-green social-btn"><i class="bi bi-google me-2"></i>Sign up with Google</button>
+      <button class="btn btn-green social-btn"><i class="bi bi-facebook me-2"></i>Sign up with Facebook</button>
+      <button class="btn btn-green social-btn"><i class="bi bi-apple me-2"></i>Sign up with Apple</button>
+    </div>
+
+    <div class="divider">OR</div>
+
+    <!-- Input Fields -->
+    <form>
+      <div class="row mb-3">
+        <div class="col">
+          <label class="form-label fw-semibold">First name</label>
+          <input type="text" class="form-control" placeholder="Enter first name">
+        </div>
+        <div class="col">
+          <label class="form-label fw-semibold">Last name</label>
+          <input type="text" class="form-control" placeholder="Enter last name">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Email</label>
+        <input type="email" class="form-control" placeholder="example.email@gmail.com">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Password</label>
+        <div class="input-group">
+          <input type="password" class="form-control" placeholder="Enter at least 8+ characters" id="password">
+          <span class="input-group-text" onclick="togglePassword()"><i class="bi bi-eye-slash" id="toggleIcon"></i></span>
+        </div>
+      </div>
+
+      <div class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" checked>
+        <label class="form-check-label">
+          By signing up, I agree with the <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-green w-100">Sign up</button>
+
+      <p class="mt-3 text-center">Already have an account? <a href="#">Sign in</a></p>
+    </form>
+  </div>
+
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const toggleIcon = document.getElementById("toggleIcon");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleIcon.classList.remove("bi-eye-slash");
+        toggleIcon.classList.add("bi-eye");
+      } else {
+        passwordInput.type = "password";
+        toggleIcon.classList.remove("bi-eye");
+        toggleIcon.classList.add("bi-eye-slash");
+      }
+    }
+  </script>
+
+</body>
+
+</html>
