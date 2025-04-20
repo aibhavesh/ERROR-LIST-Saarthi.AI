@@ -9,7 +9,7 @@ import SignIn from '../pages/Signin';
 import SignUp from '../pages/Signup';
 import HelpUs from '../pages/Helpus';
 import Output from '../pages/OutputPage';
-
+import LangflowOutput from '../pages/langflow';
 // Account Pages (Nested)
 import MyAccount from '../pages/account/MyAccount';
 import SearchHistory from '../pages/account/SearchHistory';
@@ -24,6 +24,7 @@ const AllRoutes = () => {
       <Route path="/aboutus" element={<AboutUs />} />
       <Route path="/plantrip" element={<PlanEcoTrip />} />
       <Route path="/output" element={<Output />} />
+      <Route path="/langflow" element={<LangflowOutput />} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/helpus" element={<HelpUs />} />

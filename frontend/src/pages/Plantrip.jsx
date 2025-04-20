@@ -83,6 +83,10 @@ const Plantrip = () => {
         <button type="submit" className="btn btn-success w-100">
           {loading ? 'Planning...' : 'Plan My ECOTrip'}
         </button>
+        <button
+          type="button"
+          className="btn btn-primary w-100 mt-2"
+          onClick={() => navigate('/langflow')}> Expectet Output IN LANFlow</button>
       </form>
     </div>
   );
