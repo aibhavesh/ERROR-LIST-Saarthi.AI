@@ -3,7 +3,7 @@ import React from 'react';
 const LangflowOutput = () => {
   return (
     <div className="container mt-5 text-center">
-      <h2 className="mb-4">Your Eco Trip Summary</h2>
+      <h2 className="mb-4">Your Eco  Trip Summary is their</h2>
       <div className="row justify-content-center">
         <div className="col-md-4 col-sm-12 mb-3">
           <img src="/assets/images/Cheapest.png" className="img-fluid rounded shadow" alt="Cheapest Option" />
