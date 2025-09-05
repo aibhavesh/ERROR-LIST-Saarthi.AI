@@ -16,7 +16,7 @@ const AboutUs = () => {
         <div className="row align-items-center">
           <div className="col-lg-7">
             <div className="mb-4 p-3 border rounded">
-              <p><strong>At Saarthi.AI</strong>, we are on a mission to revolutionize how urban India moves — making every journey smarter, greener, and more sustainable. 🚶‍♂️🌍🛴</p>
+              <p><strong>At Saarthi.AI</strong>, we have to hold this  are on a mission to revolutionize how urban India moves — making every journey smarter, greener, and more sustainable. 🚶‍♂️🌍🛴</p>
               <p>We believe mobility isn’t just about reaching from point A to B — it’s about how we get there. With climate change knocking at our doors, sustainable urban transport is no longer optional — it’s essential.</p>
               <p>That’s why we built an Agentic AI-powered smart travel planner that helps citizens and city planners choose the most eco-friendly travel options by comparing routes, CO₂ emissions, cost, and time — all in one intelligent dashboard.</p>
               <p>Whether you’re a daily commuter, a climate-conscious traveler, or a policymaker aiming to redesign traffic flows — we provide the data-driven insights and intuitive tools you need to take the smarter road.</p>
