@@ -31,6 +31,10 @@ export const planTrip = async (req, res) => {
       }
     );
 
+    if (!process.env.ASTRA_API_KEY) {
+      return res.status(500).json({ message: 'Server misconfigured: ASTRA_API_KEY missing' });
+    }
+
     if (!langflowResponse.ok) {
       console.error(`Langflow API error: ${langflowResponse.status}`);
       return res.status(500).json({ message: 'Langflow API error', status: langflowResponse.status });

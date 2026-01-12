@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -93,5 +92,285 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Saarthi.AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
+  <style>
+    :root {
+      --eco-green: #1fa650;
+      --neon-blue: #00eaff;
+      --futuristic-black: #10131a;
+      --glass-bg: rgba(16,19,26,0.7);
+      --glow-green: 0 0 24px 6px #1fa65088;
+      --glow-blue: 0 0 24px 6px #00eaff88;
+      --font-heading: 'Orbitron', 'Rajdhani', 'Exo', sans-serif;
+      --font-body: 'Inter', 'Poppins', 'Roboto', sans-serif;
+    }
+    html, body {
+      background: linear-gradient(135deg, #10131a 60%, #00eaff 100%);
+      color: #fff;
+      font-family: var(--font-body);
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .navbar {
+      background: var(--glass-bg);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #2228;
+    }
+    .navbar-brand {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      letter-spacing: 2px;
+      color: var(--eco-green) !important;
+      text-shadow: var(--glow-green);
+    }
+    .profile-icon {
+      width: 35px;
+      height: 35px;
+      background-color: #111;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 35px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .custom-dropdown {
+      position: absolute;
+      top: 70px;
+      right: 20px;
+      width: 280px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      display: none;
+      z-index: 999;
+    }
+    .custom-dropdown.active { display: block; }
+    .dropdown-header { padding: 15px; display: flex; align-items: center; border-bottom: 1px solid #eee; }
+    .dropdown-header img { width: 45px; height: 45px; border-radius: 50%; margin-right: 10px; }
+    .dropdown-header .info small { color: gray; }
+    .dropdown-item { display: flex; align-items: center; padding: 10px 15px; color: #333; text-decoration: none; }
+    .dropdown-item i { margin-right: 10px; }
+    .dropdown-item:hover { background-color: #f8f9fa; }
+    .switch-container { display: flex; justify-content: space-between; align-items: center; padding: 10px 15px; }
+    .hero-title { font-family: var(--font-heading); font-size: 2.2rem; background: linear-gradient(90deg, var(--eco-green), var(--neon-blue)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; animation: gradientText 3s ease-in-out infinite alternate; text-align: center; margin-bottom: 1rem; letter-spacing: 1.5px; }
+    @keyframes gradientText { 0% { background-position: 0% 50%; } 100% { background-position: 100% 50%; } }
+    .glass-card { background: rgba(16, 19, 26, 0.6); border-radius: 1.5rem; border: 1.5px solid #00eaff44; box-shadow: 0 4px 32px #00eaff22, 0 0 0 1.5px #1fa65044; backdrop-filter: blur(8px); transition: transform 0.2s, box-shadow 0.2s; }
+    .glass-card:hover { transform: translateY(-8px) scale(1.03); box-shadow: 0 8px 48px #1fa65055, 0 0 0 2.5px #00eaff99; }
+    .fade-in-section { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(.4,0,.2,1), transform 0.8s cubic-bezier(.4,0,.2,1); }
+    .fade-in-section.visible { opacity: 1; transform: none; }
+    @media (max-width: 600px) {
+      .hero-title { font-size: 1.3rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg sticky-top position-relative">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <span>Saarthi.AI</span>
+      </a>
+      <div class="d-flex align-items-center">
+        <a class="nav-link me-3" href="#">About</a>
+        <a class="nav-link me-3" href="#">Help</a>
+        <a class="nav-link me-3 fw-bold" href="#">Login</a>
+        <button class="btn btn-outline-success me-2">Sign Up</button>
+        <div class="profile-icon" id="profileBtn">A</div>
+      </div>
+      <!-- Profile Dropdown -->
+      <div class="custom-dropdown" id="dropdownMenu">
+        <div class="dropdown-header">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User">
+          <div class="info">
+            <strong>User name</strong><br>
+            <small>example@gmail.com</small>
+          </div>
+        </div>
+        <a href="#" class="dropdown-item"><i class="bi bi-person-circle"></i> Edit profile</a>
+        <a href="#" class="dropdown-item"><i class="bi bi-gear"></i> Preferences</a>
+        <div class="switch-container">
+          <span><i class="bi bi-moon"></i> Night mode</span>
+          <div class="form-check form-switch m-0">
+            <input class="form-check-input" type="checkbox" id="nightSwitch">
+          </div>
+        </div>
+        <a href="#" class="dropdown-item"><i class="bi bi-clock-history"></i> History</a>
+        <a href="#" class="dropdown-item"><i class="bi bi-award"></i> Badges earned</a>
+        <a href="#" class="dropdown-item"><i class="bi bi-leaf"></i> Sustainability Score</a>
+        <hr class="m-0">
+        <a href="#" class="dropdown-item text-danger"><i class="bi bi-box-arrow-right"></i> Sign out</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <section class="container py-5 fade-in-section">
+    <h2 class="hero-title mb-4">About Saarthi.AI</h2>
+    <div class="row align-items-center">
+      <div class="col-lg-7">
+        <div class="glass-card p-4 mb-4">
+          <p><strong>At Saarthi.AI</strong>, we are on a mission to revolutionize how urban India moves — making every journey smarter, greener, and more sustainable. 🌱🌏🚴‍♂️</p>
+          <p>We believe mobility isn’t just about reaching from point A to B — it’s about how we get there. With climate change knocking at our doors, sustainable urban transport is no longer optional — it’s essential.</p>
+          <p>That’s why we built an Agentic AI-powered smart travel planner that helps citizens and city planners choose the most eco-friendly travel options by comparing routes, CO₂ emissions, cost, and time — all in one intelligent dashboard.</p>
+          <p>Whether you’re a daily commuter, a climate-conscious traveler, or a policymaker aiming to redesign traffic flows — we provide the data-driven insights and intuitive tools you need to take the smarter road.</p>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center">
+        <!-- 3D Globe -->
+        <div class="globe-container position-relative mx-auto mb-4">
+          <canvas id="globe3d"></canvas>
+          <svg class="particles" width="100%" height="100%">
+            <circle cx="50%" cy="50%" r="48%" fill="none" stroke="#00eaff88" stroke-width="2" stroke-dasharray="8 12">
+              <animate attributeName="stroke-dashoffset" from="0" to="40" dur="3s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="50%" cy="50%" r="38%" fill="none" stroke="#1fa65088" stroke-width="2" stroke-dasharray="6 10">
+              <animate attributeName="stroke-dashoffset" from="0" to="30" dur="2.2s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- What Drives Us -->
+    <div class="mt-5">
+      <h4 class="text-success mb-3"><i class="bi bi-lightbulb"></i> What Drives Us?</h4>
+      <div class="glass-card p-4">
+        <ul class="list-unstyled">
+          <li class="icon-text mb-2"><i class="bi bi-tree-fill text-success"></i> A passion for environment-first innovation</li>
+          <li class="icon-text mb-2"><i class="bi bi-cpu text-info"></i> Leveraging AI and data to empower conscious choices</li>
+          <li class="icon-text mb-2"><i class="bi bi-building text-warning"></i> Building smarter cities for future generations</li>
+          <li class="icon-text mb-2"><i class="bi bi-people text-primary"></i> Bridging the gap between people, policy, and planet</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Our Vision -->
+    <div class="mt-5">
+      <h4 class="text-info"><i class="bi bi-eye"></i> Our Vision</h4>
+      <p class="glass-card p-3">To be India’s leading sustainability-focused urban mobility platform, inspiring millions to reduce their carbon footprint — one commute at a time.</p>
+    </div>
+  </section>
+
+  <!-- Fade-in Animation Script -->
+  <script>
+    // Fade-in on scroll
+    function revealOnScroll() {
+      document.querySelectorAll('.fade-in-section').forEach(function(section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 60) {
+          section.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('DOMContentLoaded', revealOnScroll);
+  </script>
+  <!-- Three.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+  <script>
+    // Interactive Three.js Globe with Texture and Glow
+    const canvas = document.getElementById('globe3d');
+    if (canvas) {
+      const width = canvas.parentElement.offsetWidth;
+      const height = canvas.parentElement.offsetHeight;
+      canvas.width = width;
+      canvas.height = height;
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, width/height, 0.1, 1000);
+      camera.position.z = 2.8;
+      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+      renderer.setClearColor(0x000000, 0);
+      renderer.setSize(width, height);
+      // Earth sphere with texture
+      const geometry = new THREE.SphereGeometry(1, 64, 64);
+      const texture = new THREE.TextureLoader().load('https://threejs.org/examples/textures/land_ocean_ice_cloud_2048.jpg');
+      const material = new THREE.MeshPhongMaterial({
+        map: texture,
+        shininess: 30,
+        emissive: 0x00eaff,
+        emissiveIntensity: 0.12,
+        specular: 0x1fa650,
+        color: 0xffffff
+      });
+      const globe = new THREE.Mesh(geometry, material);
+      scene.add(globe);
+      // Glow effect
+      const glowMaterial = new THREE.MeshBasicMaterial({ color: 0x00eaff, transparent: true, opacity: 0.18 });
+      const glow = new THREE.Mesh(new THREE.SphereGeometry(1.08, 64, 64), glowMaterial);
+      scene.add(glow);
+      // Lighting
+      const ambient = new THREE.AmbientLight(0xffffff, 0.7);
+      scene.add(ambient);
+      const dirLight = new THREE.DirectionalLight(0x1fa650, 1.2);
+      dirLight.position.set(2, 2, 2);
+      scene.add(dirLight);
+      // Interactivity: rotate globe with mouse
+      let isDragging = false;
+      let previousMousePosition = { x: 0, y: 0 };
+      canvas.addEventListener('mousedown', function(e) {
+        isDragging = true;
+        previousMousePosition = { x: e.clientX, y: e.clientY };
+      });
+      window.addEventListener('mouseup', function() { isDragging = false; });
+      canvas.addEventListener('mousemove', function(e) {
+        if (!isDragging) return;
+        const deltaMove = { x: e.clientX - previousMousePosition.x, y: e.clientY - previousMousePosition.y };
+        globe.rotation.y += deltaMove.x * 0.01;
+        globe.rotation.x += deltaMove.y * 0.01;
+        previousMousePosition = { x: e.clientX, y: e.clientY };
+      });
+      // Animation loop
+      function animate() {
+        globe.rotation.y += 0.003;
+        glow.rotation.y += 0.002;
+        renderer.render(scene, camera);
+        requestAnimationFrame(animate);
+      }
+      animate();
+      // Responsive
+      window.addEventListener('resize', () => {
+        const w = canvas.parentElement.offsetWidth;
+        const h = canvas.parentElement.offsetHeight;
+        renderer.setSize(w, h);
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+      });
+    }
+    // Profile dropdown logic
+    const profileBtn = document.getElementById("profileBtn");
+    const dropdown = document.getElementById("dropdownMenu");
+    profileBtn.addEventListener("click", () => {
+      dropdown.classList.toggle("active");
+    });
+    document.addEventListener("click", function (e) {
+      if (!profileBtn.contains(e.target) && !dropdown.contains(e.target)) {
+        dropdown.classList.remove("active");
+      }
+    });
+    // Night mode toggle
+    const nightSwitch = document.getElementById('nightSwitch');
+    nightSwitch.addEventListener('change', function() {
+      if (this.checked) {
+        document.body.style.background = 'linear-gradient(135deg, #10131a 60%, #00eaff 100%)';
+        document.body.style.color = '#fff';
+      } else {
+        document.body.style.background = 'linear-gradient(135deg, #fff 60%, #1fa650 100%)';
+        document.body.style.color = '#10131a';
+      }
+    });
+  </script>
 </body>
 </html>

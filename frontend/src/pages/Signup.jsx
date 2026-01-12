@@ -18,7 +18,7 @@ const Signup = () => {
       try {
         await axios.post('http://localhost:5000/api/signup', values);
         alert('Signup successful! Please login now.');
-        navigate('/login');
+        navigate('/signin');
       } catch (err) {
         alert(err.response?.data?.message || 'Signup failed');
       }

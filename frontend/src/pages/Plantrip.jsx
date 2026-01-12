@@ -22,7 +22,7 @@ const Plantrip = () => {
     onSubmit: async (values) => {
       if (!token) {
         alert('Please login first.');
-        navigate('/login');
+        navigate('/signin');
         return;
       }
 

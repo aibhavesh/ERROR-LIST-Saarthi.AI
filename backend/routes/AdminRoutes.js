@@ -16,7 +16,9 @@ router.post('/login', async (req, res) => {
     const isMatch = await bcrypt.compare(password, admin.password);
     if (!isMatch) return res.status(401).json({ message: 'Invalid email or password' });
 
-    const token = jwt.sign({ id: admin._id }, 'secret_admin_key', { expiresIn: '1d' });
+    const secret = process.env.JWT_SECRET;
+    if (!secret) return res.status(500).json({ message: 'Server misconfigured: JWT_SECRET missing' });
+    const token = jwt.sign({ id: admin._id }, secret, { expiresIn: '1d' });
 
     res.status(200).json({ message: 'Login successful', token });
   } catch (err) {
